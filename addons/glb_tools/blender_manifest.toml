@@ -4,7 +4,7 @@ schema_version = "1.0.0"
 # Change the values according to your extension
 # id must be the same as the directory name, and must be unique
 id = "glb_tools"
-version = "1.0.0"
+version = "1.1.0"
 name = "GLB Tools"
 tagline = "Tools for working with GLB/GLTF files and React Three Fiber"
 maintainer = "Miles Roxas"

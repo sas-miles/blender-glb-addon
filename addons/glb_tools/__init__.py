@@ -12,7 +12,7 @@ bl_info = {
     "name": "GLB Tools",
     "author": "Miles Roxas",
     "blender": (3, 5, 0),
-    "version": (1, 0, 0),
+    "version": (1, 1, 0),
     "description": "Tools for working with GLB/GLTF files and React Three Fiber",
     "warning": "",
     "doc_url": "",

@@ -27,6 +27,13 @@ def get_glb_rotation(obj):
         -rotation.y
     ))
 
+def get_glb_scale(obj):
+    """
+    Get object scale adjusted for GLB coordinate system if needed
+    """
+    # In most cases, scale can be used directly
+    return obj.scale
+
 def get_polygon_count(obj):
     """
     Get polygon count of a mesh object
