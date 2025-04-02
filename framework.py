@@ -32,13 +32,13 @@ _absolute_import_pattern = re.compile(r'^\s*from\s+(\w+[\w.]*)\s+import\s+(.*)$'
 _addon_md5__signature = "addon.txt"
 _ADDON_MANIFEST_FILE = "blender_manifest.toml"
 _WHEELS_PATH = "wheels"
-# 默认使用的插件模板 不要轻易修改
+# Default addon template - do not modify unless necessary
 _ADDON_TEMPLATE = "sample_addon"
 _ADDONS_FOLDER = "addons"
 _ADDON_ROOT = os.path.join(PROJECT_ROOT, _ADDONS_FOLDER)
 
 # Install fake bpy module only when user have configured the blender executable path
-# 仅在用户配置了Blender可执行文件路径时安装fake bpy模块 避免在非Blender环境下安装fake bpy模块(如CICD流程中)
+# This avoids installing fake bpy module in non-Blender environments (like CICD processes)
 if os.path.isfile(BLENDER_EXE_PATH):
     install_fake_bpy(BLENDER_EXE_PATH)
 

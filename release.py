@@ -1,11 +1,9 @@
 from framework import get_init_file_path, release_addon
 from main import ACTIVE_ADDON, IS_EXTENSION
 
-# 发布前请修改ACTIVE_ADDON参数
+# Please modify ACTIVE_ADDON parameter before releasing
 
 # The name of the addon to be released, this name is defined in the config.py of the addon as __addon_name__
-# 插件的config.py文件中定义的插件名称 __addon_name__
-
 
 if __name__ == '__main__':
     import argparse

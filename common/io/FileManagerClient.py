@@ -30,7 +30,7 @@ def is_filename_postfix_in(filename: str, target_set: set):
     return False
 
 
-# 搜索文件夹下所有文件 post_filter为后缀名集合 全小写
+# Search all files in the directory, post_filter is a set of file extensions (lowercase)
 def search_files(folder_path: str, post_filter: set) -> list:
     def __depth_first_search_files_helper__(current_folder: str, pre_result: list):
         for filename in get_all_filename(current_folder):

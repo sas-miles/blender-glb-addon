@@ -1,6 +1,15 @@
+# Dictionary for internationalization
+# Format: ("*", "key"): "translation"
+dictionary = {
+    # Add your translations here
+}
+
 common_dictionary = {
     "zh_CN": {
-        # ("*", "translation"): "翻译",
+        # Add Chinese translations here
+    },
+    "en_US": {
+        # Add English translations here
     }
 }
 

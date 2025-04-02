@@ -37,7 +37,7 @@ def load_dictionary(additional_dictionary: dict[str, dict[tuple, str]]):
             __dictionary__[key].update(additional_dictionary[key])
 
 
-# 在需要拼接字符串的地方使用i18n函数
+# Use the i18n function when you need to concatenate strings with translations
 def i18n(content: str) -> str:
     global __language_code__, __dictionary__
     __language_code__ = bpy.context.preferences.view.language
@@ -51,3 +51,12 @@ def i18n(content: str) -> str:
         if key[1] == content:
             return __dictionary__[__language_code__][key]
     return content
+
+# Example:
+#     dictionary = {
+#         ("*", key): "example",
+#         ("*", key2): "example2"
+#     }
+
+__language_code__ = "en_US"
+__dictionary__ = {}
