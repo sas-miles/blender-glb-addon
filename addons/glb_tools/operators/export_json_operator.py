@@ -2,7 +2,7 @@ import bpy
 import json
 import os
 from bpy_extras.io_utils import ExportHelper
-from ..utils import get_glb_position, get_glb_rotation, get_glb_scale
+from ..utils import get_glb_position, get_glb_rotation
 
 class OBJECT_OT_export_transforms_json(bpy.types.Operator, ExportHelper):
     bl_idname = "object.export_transforms_json"
@@ -30,13 +30,13 @@ class OBJECT_OT_export_transforms_json(bpy.types.Operator, ExportHelper):
                 
             glb_pos = get_glb_position(obj)
             glb_rot = get_glb_rotation(obj)
-            glb_scale = get_glb_scale(obj)
+            scale = obj.scale
             
             obj_data = {
                 "name": obj.name,
                 "position": [glb_pos.x, glb_pos.y, glb_pos.z],
                 "rotation": [glb_rot.x, glb_rot.y, glb_rot.z],
-                "scale": [glb_scale.x, glb_scale.y, glb_scale.z]
+                "scale": [scale.x, scale.y, scale.z]
             }
             
             transforms_data.append(obj_data)

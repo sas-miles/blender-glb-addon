@@ -38,11 +38,12 @@ class VIEW3D_PT_glb_position(bpy.types.Panel):
             layout.operator("object.copy_glb_position")
             layout.operator("object.copy_glb_rotation")
             layout.operator("object.copy_r3f_transform")
-            
-            # Add separator before export button
-            layout.separator()
-            # Export JSON Button
-            layout.label(text="Export Selected Objects:")
-            layout.operator("object.export_transforms_json")
         else:
             layout.label(text="No object selected") 
+            
+        # Add separator before export button
+        layout.separator()
+        # Export JSON Button - make more prominent
+        box = layout.box()
+        box.label(text="Export Selected Objects:")
+        box.operator("object.export_transforms_json", icon='EXPORT') 
